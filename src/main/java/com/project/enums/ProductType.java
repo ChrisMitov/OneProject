@@ -1,0 +1,5 @@
+package com.project.enums;
+
+public enum ProductType {
+	BEER, VODKA, RAKIQ, WHISKEY, GIN, RUM, TEQUILA, BRANDY, CHAMPAGNE, WINE, WATER, JUICE, SYRUP, COFFEE, CACAO, COCKTAIL
+}
