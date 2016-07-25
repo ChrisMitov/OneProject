@@ -32,15 +32,15 @@ public class Order {
 	@Temporal(TemporalType.DATE)
 	@Column(name = "time_started")
 	private Date timeStarted;
-	
+
 	@Temporal(TemporalType.DATE)
 	@Column(name = "time_finished")
 	private Date timeFinished;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "barmanId")
 	private User barman;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "waiterId")
 	private User waiter;
@@ -56,7 +56,7 @@ public class Order {
 		productsInOrder = new ArrayList<OrderedProducts>();
 		this.type = OrderType.WAITING;
 	}
-		
+
 	public Order(Date timeStarted, User barman, User waiter) {
 		this.timeStarted = timeStarted;
 		this.barman = barman;
@@ -122,13 +122,7 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return "BarOrder{" +
-				"idOrder=" + idOrder +
-				", timeStarted=" + timeStarted +
-				", timeFinished=" + timeFinished +
-				", barman=" + barman +
-				", waiter=" + waiter +
-				", productsInOrder=" + productsInOrder +
-				'}';
+		return "BarOrder{" + "idOrder=" + idOrder + ", timeStarted=" + timeStarted + ", timeFinished=" + timeFinished
+				+ ", barman=" + barman + ", waiter=" + waiter + ", productsInOrder=" + productsInOrder + '}';
 	}
 }
